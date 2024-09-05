@@ -94,7 +94,7 @@
                 with t defined on \([0, T]\), \(\alpha_t, \sigma_t\) being time-dependent functions and chosen such that \(x_0 \sim p(x)\), \(x_T \sim \mathcal{N}(0, \mathbf{I})\). 
                 At each \(t\), \(x_t\) has a conditional density \(p_t(x | x_*) = \mathcal{N}(\alpha_t x_*, \sigma_t^2\mathbf{I})\), 
                 and our goal is to estimate the marginal density \(p_t(x) = \int p_t(x | x_*) p(x) \mathrm{d}x \).
-                In most cases, the marginal density \(p_t(x)\) is in tractable. 
+                In most cases, the marginal density \(p_t(x)\) is intractable. 
                 Some previous methods<d-cite key="chen2019neural"></d-cite><d-cite key="kingma2018glow"></d-cite><d-cite key="grathwohl2018ffjord"></d-cite><d-cite key="dinh2015nice"></d-cite> focus on maximizing the likelihood \(\log p_t(x)\), whereas modern approaches take advantage of differential equations with the corresponding marginal density \(p_t(x)\) to directly estmate data samples from \(p(x)\).
             </p>
             <p> 
@@ -305,7 +305,7 @@
                     &= \mathcal{L}_{s_\lambda}(\theta)
                 \end{align*}
                 \]
-                this aligns with the observation made in <d-cite key="kingma2023understanding"></d-cite>, that different model predictions of diffusion models corresponding to a vanilla denosiing objective weighted by different time-dependent functions.
+                this aligns with the observation made in <d-cite key="kingma2023understanding"></d-cite>, that different model predictions of diffusion models corresponding to a vanilla denoising objective weighted by different time-dependent functions.
                 We trained all three models and present the results below. 
                 <d-figure>
                     <table class="display-table" style="text-align: center;">
